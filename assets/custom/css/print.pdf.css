@@ -1,0 +1,193 @@
+ul{
+    list-style: none;
+}
+
+/*Induk Layout*/
+/* .container{
+	width: 1170px;
+	margin: 0 auto;
+	padding: 0 15px;
+} */
+
+body{
+    margin-top: 0;
+}
+/* Css Untuk Semua Tabel */
+.tabel{
+    border-collapse: collapse;
+    border: 1px solid;
+}
+
+tr{
+    border: 1px solid;
+}
+
+td{
+    border: 1px solid;
+}
+
+.start-header{
+    margin-top: 0;
+}
+
+
+.gambar-header{
+    padding: 7px;
+    font-weight: bold;
+    font-style: italic;
+}
+.ket{
+    padding:0 10px 0 10px;
+}
+
+.input-dt-header{
+    width: 160px;
+    padding: 10px;
+}
+.subtitle-header{
+    width: 400px;
+    text-align: center;
+}
+
+
+/* Css Main */
+.main h4{
+    margin-bottom: 0;
+}
+.main ol{
+    padding-left: 17px;
+    margin-top: 0;
+    font-size: 14px;
+}
+
+
+/* Css Untuk Table Data Pemohon */
+.title-input-pemohon{
+    width: 200px;
+}
+
+.input-dt-pemohon{
+    width: 535px;
+}
+
+
+/* Css Untuk Table Penanggung Jawab */
+.title-input-penanggung{
+    width: 110px;
+
+}
+
+.input-dt-penanggung{
+    width: 247px;
+}
+
+
+/* Css Tabel Data Server */
+.title-input-server{
+    width: 240px;
+    padding: 7px 0;
+}
+.t-in-dt-server{
+    width: 120px;
+    padding: 7px 0;
+}
+
+
+/* Css Bagian Ttd */
+.bagian-ttd{
+    width: 370px;
+    text-align: center;
+}
+
+
+
+/* Css Persetujuan */
+.note-end{
+    width: 750px;
+}
+
+
+/* Css Untuk Bagian Body TTD */
+.body-ttd{
+    padding: 8px;
+}
+
+/* Tabel Admistrator */
+.ttd-admin{
+    width: 400px;
+    text-align: center;
+}
+
+/* Tabel Input keterangan */
+.in-dt-admin{
+    width: 400px;
+    padding: 7px;
+}
+
+/* Footer Note */
+.tit-footer-note{
+    float: left;
+}
+.catatan-akhir{
+    float: left;
+}
+.catatan-akhir ul{
+    padding-left: 10px;
+}
+
+/* =========================FONT============================ */
+.cetak-miring{
+    font-style: italic;
+}
+.f-bold{
+    font-weight: bold;
+}
+.t-center{
+    text-align: center;
+}
+.t-unline{
+    /* border-bottom: 2px solid */
+    text-decoration: underline;
+}
+
+.fz-15{
+    font-size: 15px;
+}
+.fz-18{
+    font-size: 18px;
+}
+
+/* ========================= PADDING ============================ */
+.pd-6{
+    padding: 6px;
+}
+.pd-7{
+    padding: 7px;
+}
+.pd-8{
+    padding: 8px;
+}
+
+.pl-6 {
+    padding-left: 6px;
+}
+
+/* ========================= MARGIN ============================ */
+.mg-8{
+    margin: 8px;
+}
+.mgb-5{
+    margin-bottom: 6px;
+}
+.mgb-10{
+    margin-bottom: 10px;
+}
+.mgb-15{
+    margin-bottom: 15px;
+}
+.mgb-20{
+    margin-bottom: 20px;
+}
+.mgb-25{
+    margin-bottom: 25px;
+}
