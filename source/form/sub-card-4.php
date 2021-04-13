@@ -1,5 +1,5 @@
 <!-- Card Body -->
-<div class="card-body fourth-form d-none">
+<div class="card-body fourth-form">
     <h5 class="text-center">DATA SERVER</h5>
 
     <!-- Input Tipe / Merk -->
@@ -35,7 +35,7 @@
     <div class="mb-4 row justify-content-center">
         <label for="in-psu" class="col-sm-3 col-form-label fw-bold">PSU (W)</label>
         <div class="col-sm-8">
-            <input name="psu" type="text" class="p-2 form-control" id="in-psu" />
+            <input name="psu" type="number" class="p-2 form-control" id="in-psu" />
         </div>
     </div>
 
@@ -92,14 +92,15 @@
     </div>
 
     <!-- Tombol Kembali & Print Menjadi PDF -->
-    <div class="mt-5 d-grid gap-3 col-md-5 mx-auto">
+    <!-- <div class="mt-5 d-grid gap-3 col-md-5 mx-auto">
         <button class="p-2 rounded-3 btn btn-primary btn-lanjut-5" type="button">Lanjut</button>
         <button class="p-2 rounded-3 btn btn-secondary btn-kembali-3" type="button">Kembali</button>
-    </div>
+    </div> -->
+
 </div>
 <!-- Akhir Card Body -->
 
 <!-- Footer Card -->
-<div class="card-footer text-center f-form4 d-none">
+<!-- <div class="card-footer text-center f-form4 d-none">
     5 of 6
-</div>
+</div> -->

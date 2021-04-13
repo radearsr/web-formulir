@@ -1,5 +1,5 @@
 <!-- Card Body -->
-    <div class="card-body first-form d-none">
+    <div class="card-body first-form">
         <h5 class="text-center">DATA INSTANSI PEMOHON</h5>
 
         <div class="mt-3 mb-4 row justify-content-start">
@@ -34,7 +34,7 @@
         <div class="mb-4 row justify-content-center">
             <label for="nomer" class="col-md-4 col-form-label fw-bold">No. Telepon</label>
             <div class="col-sm-8">
-                <input name="telp-1" type="text" class="p-2 form-control" id="nomer" required />
+                <input name="telp-1" type="number" class="p-2 form-control" id="nomer" required />
             </div>
         </div>
 
@@ -46,16 +46,16 @@
             </div>
         </div>
 
-        <div class="mt-5 d-grid gap-3 col-md-5 mx-auto">
+        <!-- <div class="mt-5 d-grid gap-3 col-md-5 mx-auto">
             <button class="p-2 rounded-3 btn btn-primary btn-lanjut-2" type="button">Lanjut</button>
             <button class="p-2 rounded-3 btn btn-secondary btn-kembali-main" type="button">Kembali</button>
-        </div>
+        </div> -->
         
     </div>
 
 <!-- Akhir Card Body -->
 
 <!-- Footer Card -->
-<div class="card-footer text-center f-form1 d-none">
+<!-- <div class="card-footer text-center f-form1 d-none">
     2 of 6
-</div>
+</div> -->

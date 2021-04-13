@@ -1,5 +1,5 @@
 <!-- Card Body -->
-<div class="card-body fifth-form d-none">
+<div class="card-body fifth-form">
     <h5 class="text-center">BAGIAN TANDA TANGAN</h5>
 
     <!-- First Input -->
@@ -20,7 +20,7 @@
     <div class="mb-4 row justify-content-center">
         <label for="nip-ttd-1" class="col-sm-3 col-form-label fw-bold">NIP</label>
         <div class="col-sm-8">
-            <input name="nip-1" type="text" class="p-2 form-control" id="nip-ttd-1" />
+            <input name="nip-1" type="number" class="p-2 form-control" id="nip-ttd-1" />
         </div>
     </div>
 
@@ -42,7 +42,7 @@
     <div class="mb-4 row justify-content-center">
         <label for="nip-ttd-2" class="col-sm-3 col-form-label fw-bold">NIP</label>
         <div class="col-sm-8">
-            <input name="nip-2" type="text" class="p-2 form-control" id="nip-ttd-2" />
+            <input name="nip-2" type="number" class="p-2 form-control" id="nip-ttd-2" />
         </div>
     </div>
 
@@ -54,6 +54,6 @@
 <!-- Akhir Card Body -->
 
 <!-- Footer Card -->
-<div class="card-footer text-center f-form5 d-none">
+<!-- <div class="card-footer text-center f-form5 d-none">
     6 of 6
-</div>
+</div> -->
