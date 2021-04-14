@@ -28,9 +28,9 @@ $rows = fetch_data();
     <div class="mt-5 pt-5 container-md">
         <h1 class="text-center">Data Hasil Inputan Formulir Permohonan</h1>
         <div class="table-responsive">
-            <table class="table table-bordered">
+            <table class="table table-bordered table-striped">
                 <!-- Main Header Table -->
-                <tr>
+                <tr class="table-dark">
                     <th rowspan="2">No Tabel</th>
                     <th colspan="2">Bagian Header Formulir</th>
                     <th rowspan="2">Data Instansi Pemohon</th>
@@ -40,7 +40,7 @@ $rows = fetch_data();
                     <th rowspan="2">Aksi</th>
                 </tr>
                 <!-- Lanjutan Header Table -->
-                <tr>
+                <tr class="table-dark">
                     <!-- 1 -->
                     <td>No.</td>
                     <td>Tanggal</td>
@@ -56,6 +56,14 @@ $rows = fetch_data();
                     <!-- 6 -->
                     <!-- Baris Baru -->
                 </tr>
+
+                <!-- Contents Table Saat Tidak Ada Data Dalam Database -->
+                <?php if( $rows === 1 ) : ?>
+                <tr>
+                    <td colspan="9">Tidak Ada Rekaman Data Yang Terinput</td>
+                </tr>
+                <?php endif;?>
+                <?php die;?>
 
                 <!-- Contents Table -->
                 <?php  $i = 1;?>
@@ -347,7 +355,8 @@ $rows = fetch_data();
                     </td>
 
                     <!-- 6 -->
-                    <td><a href="../delete/delete.php?dt=<?= $row['id']?>" class="btn btn-danger">DELETE</a></td>
+                    <td><a href="../delete/delete.php?dt=<?= $row['id']?>" class="btn btn-danger"
+                            onclick="return confirm('Anda Yakin Ingin Menghapus Data Ini?');">DELETE</a></td>
                 </tr>
                 <?php $i++?>
                 <?php endforeach;?>
@@ -356,6 +365,6 @@ $rows = fetch_data();
         </div>
     </div>
 </body>
-<script src="../assets/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/bootstrap.bundle.min.js"></script>
 
 </html>

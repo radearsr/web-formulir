@@ -27,12 +27,18 @@ function fetch_data(){
 
     $rows = [];
 
+    $error = 1;
+
     if( mysqli_num_rows($result) > 0 ){
 
         while( $data = mysqli_fetch_assoc($result) ){
             $rows[] = $data;
         }
         return $rows;
+    }else{
+
+        return $error;
+
     }
 
 }
