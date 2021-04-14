@@ -1,6 +1,6 @@
 <?php 
 
-require "../source/functions.php";
+require "../functions.php";
 
 $rows = fetch_data();
 
@@ -14,7 +14,7 @@ $rows = fetch_data();
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css" />
     <title>Tampilan Data</title>
 </head>
 
@@ -347,7 +347,7 @@ $rows = fetch_data();
                     </td>
 
                     <!-- 6 -->
-                    <td><a href="#" class="btn btn-danger">DELETE</a></td>
+                    <td><a href="../delete/delete.php?dt=<?= $row['id']?>" class="btn btn-danger">DELETE</a></td>
                 </tr>
                 <?php $i++?>
                 <?php endforeach;?>

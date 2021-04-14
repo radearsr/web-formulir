@@ -23,7 +23,7 @@
 
                     <form action="source/print-pdf/laporanpdf.php" method="post">
                         <!-- Data Form -->
-                            <?php
+                        <?php
                                 include "source/form/main-card.php";
                                 include "source/form/sub-card-1.php";
                                 include "source/form/sub-card-2.php";
@@ -32,12 +32,13 @@
                                 include "source/form/sub-card-5.php";
                             ?>
                         <!-- Data Form -->
-                    </form>   
+                    </form>
                 </div>
             </div>
             <!-- Akhir Main Card -->
         </div>
     </div>
 </body>
-<script src="assets/custom/js/custom.js"></script>
+<!-- <script src="assets/custom/js/custom.js"></script> -->
+
 </html>

@@ -6,7 +6,7 @@
     <div class="mt-3 mb-4 row justify-content-center">
         <label for="merk&tipe" class="col-sm-3 col-form-label fw-bold">Merk dan tipe server</label>
         <div class="col-sm-8">
-            <input name="merk" type="text" class="p-2 form-control" id="merk&tipe" />
+            <input name="merk" type="text" class="p-2 form-control" id="merk&tipe" required />
         </div>
     </div>
 
@@ -19,7 +19,7 @@
     <div class="mb-4 row justify-content-center">
         <label for="in-ram" class="col-sm-3 col-form-label fw-bold">RAM (GB)</label>
         <div class="col-sm-8">
-            <input name="ram" type="number" class="p-2 form-control" id="in-ram" />
+            <input name="ram" type="number" class="p-2 form-control" id="in-ram" required />
         </div>
     </div>
 
@@ -27,7 +27,7 @@
     <div class="mb-4 row justify-content-center">
         <label for="in-hdd" class="col-sm-3 col-form-label fw-bold">HDD (GB)</label>
         <div class="col-sm-8">
-            <input name="hdd" type="number" class="p-2 form-control" id="in-hdd" />
+            <input name="hdd" type="number" class="p-2 form-control" id="in-hdd" required />
         </div>
     </div>
 
@@ -35,7 +35,7 @@
     <div class="mb-4 row justify-content-center">
         <label for="in-psu" class="col-sm-3 col-form-label fw-bold">PSU (W)</label>
         <div class="col-sm-8">
-            <input name="psu" type="number" class="p-2 form-control" id="in-psu" />
+            <input name="psu" type="number" class="p-2 form-control" id="in-psu" required />
         </div>
     </div>
 
@@ -43,35 +43,35 @@
     <div class="mb-4 row justify-content-center">
         <label for="in-type" class="col-sm-3 col-form-label fw-bold">TYPE (U)</label>
         <div class="col-sm-8">
-            <input name="tipe" type="text" class="p-2 form-control" id="in-type" />
+            <input name="tipe" type="text" class="p-2 form-control" id="in-type" required />
         </div>
     </div>
     <!-- Input PROC -->
     <div class="mb-4 row justify-content-center">
         <label for="in-proc" class="col-sm-3 col-form-label fw-bold">PROC</label>
         <div class="col-sm-8">
-            <input name="proc" type="text" class="p-2 form-control" id="in-proc" />
+            <input name="proc" type="text" class="p-2 form-control" id="in-proc" required />
         </div>
     </div>
     <!-- Input CORE -->
     <div class="mb-4 row justify-content-center">
         <label for="in-core" class="col-sm-3 col-form-label fw-bold">CORE</label>
         <div class="col-sm-8">
-            <input name="core" type="text" class="p-2 form-control" id="in-core" />
+            <input name="core" type="text" class="p-2 form-control" id="in-core" required />
         </div>
     </div>
     <!-- Input OS -->
     <div class="mb-4 row justify-content-center">
         <label for="in-os" class="col-sm-3 col-form-label fw-bold">OS</label>
         <div class="col-sm-8">
-            <input name="os" type="text" class="p-2 form-control" id="in-os" />
+            <input name="os" type="text" class="p-2 form-control" id="in-os" required />
         </div>
     </div>
     <!-- Input SN -->
     <div class="mb-4 row justify-content-center">
         <label for="in-sn" class="col-sm-3 col-form-label fw-bold">SN</label>
         <div class="col-sm-8">
-            <input name="sn" type="text" class="p-2 form-control" id="in-sn" />
+            <input name="sn" type="text" class="p-2 form-control" id="in-sn" required />
         </div>
     </div>
 
@@ -79,7 +79,7 @@
     <div class="mb-3 row justify-content-center">
         <label for="app-server" class="col-sm-3 col-form-label fw-bold">Aplikasi Didalam Server</label>
         <div class="col-md-8">
-            <textarea name="app_server" class="form-control" id="app-server" rows="2"></textarea>
+            <textarea name="app_server" class="form-control" id="app-server" rows="2" required ></textarea>
         </div>
     </div>
 
@@ -87,7 +87,7 @@
     <div class="mb-3 row justify-content-center">
         <label for="des-app" class="col-sm-3 col-form-label fw-bold">Deskripsi aplikasi</label>
         <div class="col-md-8">
-            <textarea name="des_app" class="form-control" id="des-app" rows="3"></textarea>
+            <textarea name="des_app" class="form-control" id="des-app" rows="3" required ></textarea>
         </div>
     </div>
 

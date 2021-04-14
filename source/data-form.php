@@ -1,5 +1,8 @@
 <?php 
 
+    require "functions.php";
+
+
     // Main Form
     $no      = $_POST["no-1"];
     $tanggal = $_POST["tanggal-1"];
@@ -79,7 +82,7 @@
     $ram        = $_POST["ram"];
     $hdd        = $_POST["hdd"];
     $psu        = $_POST["psu"];
-    $tipe       = $_POST["tipe"];
+    $tipe       = $_POST["tipe"];              
     $proc       = $_POST["proc"];
     $core       = $_POST["core"];
     $os         = $_POST["os"];
@@ -131,6 +134,12 @@
     // echo "<br>";
     // echo $nipTtd2;
     // echo "<br>";
+
+    $tambah = insertData($no, $tanggal, $opd, $bidang, $alamat, $FirstTelp, $FirstMail, $NmAdmin, $NipAdmin, $JbtAdmin, $MailAdmin, $TelpAdmin, $NmTeknis, $NipTeknis, $JbtTeknis, $MailTeknis, $TelpTeknis, $merk, $ram, $hdd, $psu, $tipe, $proc, $core, $os, $sn, $appServer, $desServer, $nmTerang1, $nipTtd1, $nmTerang2, $nipTtd2);
+
+    if ( $tambah > 0) {
+        echo "<script>alert('Data Berhasil Masuk Database')</script>";
+    }
 
 
 ?>
