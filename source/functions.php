@@ -19,6 +19,7 @@ function insertData($no, $tanggal, $opd, $bidang, $alamat, $FirstTelp, $FirstMai
     
 }
 
+// Fungsi Untuk Menampilkan Data Dari Database
 function fetch_data(){
     global $conn;
     
@@ -33,6 +34,18 @@ function fetch_data(){
         }
         return $rows;
     }
+
+}
+
+// fungsi untuk menghapus Data dari Database
+function delete($id){
+
+    global $conn;
+
+    mysqli_query($conn, "DELETE FROM data_print WHERE id='$id'");
+
+    return mysqli_affected_rows($conn);
+
 
 }
 
