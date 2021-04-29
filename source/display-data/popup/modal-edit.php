@@ -21,7 +21,13 @@
                     </div>
                     <div class="mb-3">
                         <label class="col-form-label">Bidang / Bagian / UPTD</label>
-                        <input name="bidang-1" type="text" class="form-control" value="<?= $row['bidang']?>" />
+                        <input type="text" list="dataDinas" name="bidang-1" value="<?= $row['bidang']?>"
+                            class="form-control" autocomplete="off">
+                        <datalist class="dropdown-menu" id="dataDinas">
+                            <?php $dinas = fetch_data('', "SELECT * FROM daftar_dinas"); foreach( $dinas as $dns ) : ?>
+                            <option class="dropdown-item" value="<?= $dns['nama_dinas']?>"></option>
+                            <?php endforeach;?>
+                        </datalist>
                     </div>
                     <div class="mb-3">
                         <label class="col-form-label">Alamat</label>

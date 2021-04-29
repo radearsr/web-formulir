@@ -13,3 +13,18 @@ function myFunction() {
     elementChild.remove();
   }
 }
+
+var BtnAdd = document.getElementById("btn-add");
+var elementParent = document.getElementById("input-1");
+
+var form =
+  '<div id="child-input" class="mt-3 row"><div class="col-10"><input name="nama_dinas[]" type="text" class="form-control" /></div><button type="button" id="btn-del" class="col-2 btn fw-bold"style="background-color: rgb(245, 45, 45); color: #fff;">x</button></div>';
+
+BtnAdd.addEventListener("click", () => {
+  elementParent.insertAdjacentHTML("afterend", form);
+  var BtnDel = document.getElementById("btn-del");
+  BtnDel.addEventListener("click", () => {
+    var elementChild = document.getElementById("child-input");
+    elementChild.remove();
+  });
+});

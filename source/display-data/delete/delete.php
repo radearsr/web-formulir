@@ -17,6 +17,21 @@ if( isset($_GET["dtM1"]) ){
 	ON center_table.id_ttd = data_ttd.id 
 	WHERE center_table.main_id ='$id'"
 	);
+	if ( $status_del > 0 ) {
+		echo "
+				<script>
+					alert('Data Berhasil Dihapus');
+					document.location.href='../main_display.php';
+				</script>
+		";
+	}else{
+		echo "
+				<script>
+					alert('Gagal');
+						document.location.href='../main_display.php';
+				</script>
+		";
+	}
 
 }
 elseif( isset($_GET["dtM2"]) ){
@@ -38,25 +53,48 @@ elseif( isset($_GET["dtM2"]) ){
 	WHERE center_table.main_id = '$id'"
 	);
 
+	if ( $status_del > 0 ) {
+		echo "
+				<script>
+					alert('Data Berhasil Dihapus');
+					document.location.href='../main_display.php';
+				</script>
+		";
+	}else{
+		echo "
+				<script>
+					alert('Gagal');
+						document.location.href='../main_display.php';
+				</script>
+		";
+	}
+
+}elseif ( isset($_GET["dtdns"]) ) {
+	
+	$id = $_GET["dtdns"];
+
+	$status_del = delete("DELETE FROM daftar_dinas WHERE id='$id'");
+
+	if ( $status_del > 0 ) {
+		echo "
+				<script>
+					alert('Data Berhasil Dihapus');
+					document.location.href='../main_display.php?page=NamaDinas';
+				</script>
+		";
+	}else{
+		echo "
+				<script>
+					alert('Gagal');
+						document.location.href='../main_display.php?page=NamaDinas';
+				</script>
+		";
+	}
 }
 
 
 
-if ( $status_del > 0 ) {
-	echo "
-			<script>
-				alert('Data Berhasil Dihapus');
-				document.location.href='../display.php';
-			</script>
-	";
-}else{
-	echo "
-			<script>
-				alert('Gagal');
-					document.location.href='../display.php';
-			</script>
-	";
-}
+
 
 
 ?>

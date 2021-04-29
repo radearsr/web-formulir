@@ -1,3 +1,9 @@
+<?php 
+ include "source/functions.php";
+
+ $rows = fetch_data('', "SELECT * FROM daftar_dinas");
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,7 +28,7 @@
                     </div>
                     <!-- Akhir Card Header -->
 
-                    <form data-target="_blank" action="source/print-pdf/laporanpdf.php" method="post">
+                    <form action="source/print-pdf/laporanpdf.php" method="post">
                         <!-- Data Form -->
                         <?php
                                 include "source/form/sub-card-1.php";

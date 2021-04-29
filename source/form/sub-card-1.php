@@ -24,7 +24,9 @@
         <div class="col-sm-8">
             <input type="text" list="dataDinas" name="bidang-1" class="p-2 form-control" autocomplete="off">
             <datalist class="dropdown-menu" id="dataDinas">
-                <option class="dropdown-item" value="Dinas"></option>
+                <?php foreach( $rows as $row ) : ?>
+                <option class="dropdown-item" value="<?= $row['nama_dinas']?>"></option>
+                <?php endforeach;?>
             </datalist>
         </div>
     </div>
