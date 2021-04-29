@@ -3,7 +3,18 @@
 require "../functions.php";
 
 // Panggil fungsi Dari "functions.php" Dan simpan Dalam Variabel $rows
-$rows = fetch_data();
+$rows = fetch_data('',
+"SELECT center_table.main_id, DATE_FORMAT(center_table.tanggal, '%d-%m-%Y') AS 'tanggal', data_pemohon.*, data_penanggung.*,spek_server.*,data_ttd.* 
+FROM center_table 
+JOIN data_pemohon 
+ON center_table.id_pemohon = data_pemohon.id 
+JOIN data_penanggung 
+ON center_table.id_penanggung = data_penanggung.id 
+JOIN spek_server 
+ON center_table.id_spek_server = spek_server.id_spek 
+JOIN data_ttd
+ON center_table.id_ttd = data_ttd.id"
+);
 
 ?>
 
@@ -68,24 +79,34 @@ $rows = fetch_data();
                     </td>
 
                     <!-- Modal Popup "Button Lihat" -->
-                    <?php include "modal-data.php"; ?>
+                    <?php include "popup/modal-data.php"; ?>
 
                     <!-- Table Data Aksi -->
-                    <td class="text-center">
-                        <!-- Button Delete -->
-                        <a href="../delete/delete.php?dt=<?= $row['id']?>" class="btn btn-danger"
-                            onclick="return confirm('Anda Yakin Ingin Menghapus Data Ini?');"><span
-                                class="mdi mdi-delete"></span></a>
-                    </td>
                     <td class="text-center">
                         <!-- Button Edit  -->
                         <button type="button" data-bs-toggle="modal" data-bs-target="#editData<?= $row["id"]?>"
                             class="btn btn-warning"><span class="mdi mdi-pencil-box-multiple"></span></button>
                     </td>
 
-                    <!-- Modal Popup "Button Edit" -->
-                    <?php include "modal-edit.php"; ?>
+                    <td class="text-center">
+                        <?php if( $row["id_spek_server2"] === NULL ) : ?>
+                        <!-- Button Delete -->
+                        <a href="delete/delete.php?dtM1=<?= $row['main_id']?>" class="btn btn-danger"
+                            onclick="return confirm('Anda Yakin Ingin Menghapus Data Ini?');"><span
+                                class="mdi mdi-delete"></span></a>
 
+                        <!-- Jika Terdapat Data Spek Server 2 Maka lakukan Script Dibawah -->
+                        <?php elseif( $row["id_spek_server2"] !== NULL ) : ?>
+                        <!-- Button Delete -->
+                        <a href="delete/delete.php?dtM2=<?= $row['main_id']?>" class="btn btn-danger"
+                            onclick="return confirm('Anda Yakin Ingin Menghapus Data Ini?');"><span
+                                class="mdi mdi-delete"></span></a>
+                        <?php endif;?>
+
+                    </td>
+
+                    <!-- Modal Popup "Button Edit" -->
+                    <?php include "popup/modal-edit.php"; ?>
 
                 </tr>
                 <?php $i++?>

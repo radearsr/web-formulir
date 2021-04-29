@@ -25,11 +25,11 @@
                 </div>
                 <div class="mb-3">
                     <label class="col-form-label">No.Telepon</label>
-                    <input type="text" class="form-control" value="<?= $row['firstTelp']?>" readonly />
+                    <input type="text" class="form-control" value="<?= $row['telp']?>" readonly />
                 </div>
                 <div class="mb-3">
                     <label class="col-form-label">Email</label>
-                    <input type="text" class="form-control" value="<?= $row['firstMail']?>" readonly />
+                    <input type="text" class="form-control" value="<?= $row['email']?>" readonly />
                 </div>
                 <!-- Akhir Data Instansi Pemohon -->
 
@@ -87,7 +87,7 @@
 
                 <hr class="mb-3">
 
-                <!-- Keterangan Data Server -->
+                <!-- ================================Keterangan Data Server========================= -->
                 <h5 class="mb-4 pt-4 text-center fs-3">Data Server</h5>
                 <div class="mb-3">
                     <label class="col-form-label">Merk & Tipe Server</label>
@@ -127,15 +127,71 @@
                 </div>
                 <div class="mb-3">
                     <label class="col-form-label">Aplikasi didalam Server</label>
-                    <textarea class="form-control" readonly><?= $row['appServer']?></textarea>
+                    <textarea class="form-control" readonly><?= $row['app_server']?></textarea>
                 </div>
                 <div class="mb-3">
                     <label class="col-form-label">Deskripsi Aplikasi</label>
-                    <textarea class="form-control" readonly><?= $row['desServer']?></textarea>
+                    <textarea class="form-control" readonly><?= $row['des_server']?></textarea>
                 </div>
                 <!-- Akhir Keterangan Data Server -->
 
                 <hr class="mb-3">
+
+                <!-- Jika Ada Data Keterangan Server 2 Maka Tampilkan Data -->
+
+                <!-- ================================Keterangan Data Server 2========================= -->
+                <?php if( $row["id_spek_server2"] !== NULL ) :?>
+                <?php $id = $row["id_spek_server2"]; $speks = fetch_data($id, "SELECT * FROM spek_server_2 WHERE id_spek_2 = '$id'")?>
+                <?php foreach( $speks as $spek ) :?>
+
+                <h5 class="mb-4 pt-4 text-center fs-3">Data Server 2</h5>
+                <div class="mb-3">
+                    <label class="col-form-label">Merk & Tipe Server</label>
+                    <input type="text" class="form-control" value="<?= $spek['merk']?>" readonly />
+                </div>
+                <div class="mb-3">
+                    <label class="col-form-label">RAM (GB)</label>
+                    <input type="text" class="form-control" value="<?= $spek['ram']?>" readonly />
+                </div>
+                <div class="mb-3">
+                    <label class="col-form-label">HDD (GB)</label>
+                    <input type="text" class="form-control" value="<?= $spek['hdd']?>" readonly />
+                </div>
+                <div class="mb-3">
+                    <label class="col-form-label">PSU (W)</label>
+                    <input type="text" class="form-control" value="<?= $spek['psu']?>" readonly />
+                </div>
+                <div class="mb-3">
+                    <label class="col-form-label">TYPE (U)</label>
+                    <input type="text" class="form-control" value="<?= $spek['tipe']?>" readonly />
+                </div>
+                <div class="mb-3">
+                    <label class="col-form-label">PROC</label>
+                    <input type="text" class="form-control" value="<?= $spek['proc']?>" readonly />
+                </div>
+                <div class="mb-3">
+                    <label class="col-form-label">CORE</label>
+                    <input type="text" class="form-control" value="<?= $spek['core']?>" readonly />
+                </div>
+                <div class="mb-3">
+                    <label class="col-form-label">OS</label>
+                    <input type="text" class="form-control" value="<?= $spek['os']?>" readonly />
+                </div>
+                <div class="mb-3">
+                    <label class="col-form-label">SN</label>
+                    <input type="text" class="form-control" value="<?= $spek['sn']?>" readonly />
+                </div>
+                <div class="mb-3">
+                    <label class="col-form-label">Aplikasi didalam Server</label>
+                    <textarea class="form-control" readonly><?= $spek['app_server']?></textarea>
+                </div>
+                <div class="mb-3">
+                    <label class="col-form-label">Deskripsi Aplikasi</label>
+                    <textarea class="form-control" readonly><?= $spek['des_server']?></textarea>
+                </div>
+                <?php endforeach;?>
+                <?php endif;?>
+
 
                 <!-- Bagian Tanda Tangan -->
                 <h5 class="mb-4 pt-4 text-center fs-3">Bagian Tanda Tangan</h5>
@@ -146,21 +202,21 @@
                 </h6>
                 <div class="mb-3">
                     <label class="col-form-label">Nama Terang</label>
-                    <input type="text" class="form-control" value="<?= $row['nmTerang1']?>" readonly />
+                    <input type="text" class="form-control" value="<?= $row['nm_terang1']?>" readonly />
                 </div>
                 <div class="mb-3">
                     <label class="col-form-label">NIP</label>
-                    <input type="text" class="form-control" value="<?= $row['nipTtd1']?>" readonly />
+                    <input type="text" class="form-control" value="<?= $row['nip_ttd1']?>" readonly />
                 </div>
                 <!-- ===================Mengetahui Administratif======================= -->
                 <h6 class="pt-4 fw-lighter fst-italic">*Penanggung Jawab Administratif</h6>
                 <div class="mb-3">
                     <label class="col-form-label">Nama Terang</label>
-                    <input type="text" class="form-control" value="<?= $row['nmTerang2']?>" readonly />
+                    <input type="text" class="form-control" value="<?= $row['nm_terang2']?>" readonly />
                 </div>
                 <div class="mb-3">
                     <label class="col-form-label">NIP</label>
-                    <input type="text" class="form-control" value="<?= $row['nipTtd2']?>" readonly />
+                    <input type="text" class="form-control" value="<?= $row['nip_ttd2']?>" readonly />
                 </div>
                 <!-- Akhir Bagian Tanda Tangan -->
             </div>

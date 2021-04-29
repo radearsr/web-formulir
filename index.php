@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/font/css/materialdesignicons.min.css">
     <title>Tugas Magang</title>
 </head>
 
@@ -21,16 +22,15 @@
                     </div>
                     <!-- Akhir Card Header -->
 
-                    <form action="source/print-pdf/laporanpdf.php" method="post">
+                    <form data-target="_blank" action="source/print-pdf/laporanpdf.php" method="post">
                         <!-- Data Form -->
                         <?php
-                                include "source/form/main-card.php";
                                 include "source/form/sub-card-1.php";
                                 include "source/form/sub-card-2.php";
                                 include "source/form/sub-card-3.php";
                                 include "source/form/sub-card-4.php";
                                 include "source/form/sub-card-5.php";
-                            ?>
+                        ?>
                         <!-- Data Form -->
                     </form>
                 </div>
@@ -39,6 +39,6 @@
         </div>
     </div>
 </body>
-<!-- <script src="assets/custom/js/custom.js"></script> -->
+<script src="assets/custom/js/custom.js"></script>
 
 </html>

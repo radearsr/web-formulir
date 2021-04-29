@@ -15,7 +15,7 @@
         </div>
         <!-- Checkbox On -->
         <div style="display: inline-block;" class="ms-3 form-check form-switch">
-            <label class="form-check-label" for="form2">Data Server 2</label>
+            <label class="form-check-label" for="check2">Data Server 2</label>
             <input class="form-check-input" onclick="myFunction()" type="checkbox" id="check2">
         </div>
     </div>
