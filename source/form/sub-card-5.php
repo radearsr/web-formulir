@@ -47,16 +47,8 @@
     </div>
 
     <div class="mt-5 d-grid gap-3 col-md-5 mx-auto">
-        <button class="p-2 rounded-3 btn btn-success print-now" type="submit">Print Now</button>
-        <button class="p-2 rounded-3 btn btn-success tmbl-load d-none" type="button" disabled>
-            <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
-            Sedang Proses...
-        </button>
+        <button class="p-2 rounded-3 btn btn-success print-now" type="submit"><span
+                class="mdi mdi-cloud-print-outline"></span>
+            Print Now</button>
     </div>
 </div>
-<!-- Akhir Card Body -->
-
-<!-- Footer Card -->
-<!-- <div class="card-footer text-center f-form5 d-none">
-    6 of 6
-</div> -->

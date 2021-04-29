@@ -41,17 +41,5 @@
             <input name="telp-teknis" type="number" class="p-2 form-control" id="telp-3" required />
         </div>
     </div>
-    
-    <!-- Button Lanjut & Kembali -->
-    <!-- <div class="mt-5 d-grid gap-3 col-md-5 mx-auto">
-        <button class="p-2 rounded-3 btn btn-primary btn-lanjut-4" type="button">Lanjut</button>
-        <button class="p-2 rounded-3 btn btn-secondary btn-kembali-2" type="button">Kembali</button>
-    </div> -->
 
 </div>
-<!-- Akhir Card Body -->
-
-<!-- Footer Card -->
-<!-- <div class="card-footer text-center f-form3 d-none">
-    4 of 6
-</div> -->

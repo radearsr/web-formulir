@@ -1,137 +1,15 @@
-// // Class Form
-// const FormMain = document.querySelector(".main-form");
-// const Form1    = document.querySelector(".first-form");
-// const Form2    = document.querySelector(".second-form");
-// const Form3    = document.querySelector(".third-form");
-// const Form4    = document.querySelector(".fourth-form");
-// const Form5    = document.querySelector(".fifth-form");
+function myFunction() {
+  var buttonPush = document.getElementById("check2").checked;
+  var elementParent = document.getElementById("form-data1");
+  // console.log("Hello  World");
+  // console.log(buttonPush);
+  var html =
+    '<div class="pb-2 card-body child-fourth-form" id="form-data2"> <h5 class="text-center">DATA SERVER 2</h5> <div class="mt-4 mb-3 row justify-content-center"><label for="child-merk&tipe" class="col-sm-3 col-form-label fw-bold">Merk dan tipe server</label><div class="col-sm-8"><input name="child-merk" type="text" class="p-2 form-control" id="child-merk&tipe" required /></div></div> <div class="row justify-content-start"><label class="col-sm-5 col-form-label fw-bold fst-italic">*Spesifikasi server</label></div> <div class="mb-4 row justify-content-center"><label for="child-in-ram" class="col-sm-3 col-form-label fw-bold">RAM (GB)</label><div class="col-sm-8"><input name="child-ram" type="number" class="p-2 form-control" id="child-in-ram" required /></div></div> <div class="mb-4 row justify-content-center"><label for="child-in-hdd" class="col-sm-3 col-form-label fw-bold">HDD (GB)</label><div class="col-sm-8"><input name="child-hdd" type="number" class="p-2 form-control" id="child-in-hdd" required /></div></div> <div class="mb-4 row justify-content-center"><label for="child-in-psu" class="col-sm-3 col-form-label fw-bold">PSU (W)</label><div class="col-sm-8"><input name="child-psu" type="number" class="p-2 form-control" id="child-in-psu" required /></div></div> <div class="mb-4 row justify-content-center"><label for="child-in-type" class="col-sm-3 col-form-label fw-bold">TYPE (U)</label><div class="col-sm-8"><input name="child-tipe" type="text" class="p-2 form-control" id="child-in-type" required /></div></div> <div class="mb-4 row justify-content-center"><label for="child-in-proc" class="col-sm-3 col-form-label fw-bold">PROC</label><div class="col-sm-8"><input name="child-proc" type="text" class="p-2 form-control" id="child-in-proc" required /></div></div> <div class="mb-4 row justify-content-center"><label for="child-in-core" class="col-sm-3 col-form-label fw-bold">CORE</label><div class="col-sm-8"><input name="child-core" type="text" class="p-2 form-control" id="child-in-core" required /></div></div> <div class="mb-4 row justify-content-center"><label for="child-in-os" class="col-sm-3 col-form-label fw-bold">OS</label><div class="col-sm-8"><input name="child-os" type="text" class="p-2 form-control" id="child-in-os" required /></div></div> <div class="mb-4 row justify-content-center"><label for="child-in-sn" class="col-sm-3 col-form-label fw-bold">SN</label><div class="col-sm-8"><input name="child-sn" type="text" class="p-2 form-control" id="child-in-sn" required /></div></div> <div class="mb-3 row justify-content-center"><label for="child-app-server" class="col-sm-3 col-form-label fw-bold">Aplikasi Didalam Server</label><div class="col-md-8"><textarea name="child-app_server" class="form-control" id="child-app-server" rows="2" required></textarea></div></div> <div class="mb-3 row justify-content-center"><label for="child-des-app" class="col-sm-3 col-form-label fw-bold">Deskripsi aplikasi</label><div class="col-md-8"><textarea name="child-des_app" class="form-control" id="child-des-app" rows="3" required></textarea></div></div> </div>';
 
-// // Class Footer
-// const footerMain  = document.querySelector(".f-main");
-// const footerForm1 = document.querySelector(".f-form1");
-// const footerForm2 = document.querySelector(".f-form2");
-// const footerForm3 = document.querySelector(".f-form3");
-// const footerForm4 = document.querySelector(".f-form4");
-// const footerForm5 = document.querySelector(".f-form5");
-
-// // Button Main Form
-// const btnLanjutMain = document.querySelector(".btn-lanjut-1");
-
-// // Button Form 1
-// const btnLanjut1 = document.querySelector(".btn-lanjut-2");
-// const btnKembali1 = document.querySelector(".btn-kembali-main");
-
-// // Button Form 2
-// const btnLanjut2  = document.querySelector(".btn-lanjut-3");
-// const btnKembali2 = document.querySelector(".btn-kembali-1");
-
-// // Button Form 3
-// const btnLanjut3  = document.querySelector(".btn-lanjut-4");
-// const btnKembali3 = document.querySelector(".btn-kembali-2");
-
-// // Button Form 4
-// const btnLanjut4 = document.querySelector(".btn-lanjut-5");
-// const btnKembali4 = document.querySelector(".btn-kembali-3");
-
-// // Button Form 5
-// const btnKembali5 = document.querySelector(".btn-kembali-4");
-
-// /*===============Main Form=============*/
-// btnLanjutMain.addEventListener('click', function(){
-
-//     footerMain.classList.toggle("d-none");
-//     footerForm1.classList.toggle("d-none");
-//     FormMain.classList.toggle("d-none");
-//     Form1.classList.toggle("d-none");
-
-// });
-
-// /* =============First Form==============*/
-// btnLanjut1.addEventListener('click', function(){
-
-//     footerForm1.classList.toggle("d-none");
-//     footerForm2.classList.toggle("d-none");
-//     Form1.classList.toggle("d-none");
-//     Form2.classList.toggle("d-none");
-
-// });
-// btnKembali1.addEventListener('click', function(){
-
-//     footerForm1.classList.toggle("d-none");
-//     footerMain.classList.toggle("d-none");
-//     Form1.classList.toggle("d-none");
-//     FormMain.classList.toggle("d-none");
-
-// });
-
-// /* =============Second Form==============*/
-// btnLanjut2.addEventListener('click', function(){
-
-//     footerForm3.classList.toggle("d-none");
-//     footerForm2.classList.toggle("d-none");
-//     Form3.classList.toggle("d-none");
-//     Form2.classList.toggle("d-none");
-
-// });
-// btnKembali2.addEventListener('click', function(){
-
-//     footerForm2.classList.toggle("d-none");
-//     footerForm1.classList.toggle("d-none");
-//     Form2.classList.toggle("d-none");
-//     Form1.classList.toggle("d-none");
-
-// });
-
-// /* =============Third Form==============*/
-// btnLanjut3.addEventListener('click', function(){
-
-//     footerForm3.classList.toggle("d-none");
-//     footerForm4.classList.toggle("d-none");
-//     Form3.classList.toggle("d-none");
-//     Form4.classList.toggle("d-none");
-
-// });
-// btnKembali3.addEventListener('click', function(){
-
-//     footerForm2.classList.toggle("d-none");
-//     footerForm3.classList.toggle("d-none");
-//     Form2.classList.toggle("d-none");
-//     Form3.classList.toggle("d-none");
-
-// });
-
-// /* =============Fourth Form==============*/
-// btnLanjut4.addEventListener('click', function(){
-
-//     footerForm5.classList.toggle("d-none");
-//     footerForm4.classList.toggle("d-none");
-//     Form5.classList.toggle("d-none");
-//     Form4.classList.toggle("d-none");
-
-// });
-// btnKembali4.addEventListener('click', function(){
-
-//     footerForm4.classList.toggle("d-none");
-//     footerForm3.classList.toggle("d-none");
-//     Form4.classList.toggle("d-none");
-//     Form3.classList.toggle("d-none");
-
-// });
-
-// /* =============Fifth Form==============*/
-// btnKembali5.addEventListener('click', function(){
-
-//     footerForm5.classList.toggle("d-none");
-//     footerForm4.classList.toggle("d-none");
-//     Form5.classList.toggle("d-none");
-//     Form4.classList.toggle("d-none");
-
-// });
-
-const tombolPrint = document.querySelector(".print-now");
-const tombolLoad = document.querySelector(".tmbl-load");
-
-tombolPrint.addEventListener("click", function () {
-  tombolPrint.classList.toggle("d-none");
-  tombolLoad.classList.toggle("d-none");
-});
+  if (buttonPush === true) {
+    elementParent.insertAdjacentHTML("afterend", html);
+  } else {
+    var elementChild = document.getElementById("form-data2");
+    elementChild.remove();
+  }
+}
