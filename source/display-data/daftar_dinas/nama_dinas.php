@@ -37,7 +37,7 @@
         <tr class="table-dark">
             <th>No</th>
             <th>Nama Dinas</th>
-            <th colspan="2">Aksi</th>
+            <th>Aksi</th>
         </tr>
 
 
@@ -54,16 +54,21 @@
         <?php foreach( $dinas as $dns ) : ?>
         <tr>
             <!-- Tabel No -->
-            <th><?= $i?></th>
+            <th class="mt-1"><?= $i?></th>
 
             <!-- Table Tanggal -->
-            <td><?= $dns["nama_dinas"]?></td>
+            <td class="mt-1"><?= $dns["nama_dinas"]?></td>
 
 
             <td>
                 <!-- Button Update -->
-                <button type="button" data-bs-toggle="modal" data-bs-target="#upData" class="mb-2 btn btn-warning">
+                <button type="button" data-bs-toggle="modal" data-bs-target="#upData"
+                    class="mt-1 btn btn-outline-primary">
                     <span class="mdi mdi-pencil-box-multiple"></span></button>
+                <!-- Button Delete -->
+                <a href="delete/delete.php?dtdns=<?= $dns["id"]?>" class="mt-1 btn btn-outline-danger"
+                    onclick="return confirm('Anda Yakin Ingin Menghapus Data Ini?');"><span
+                        class="mdi mdi-delete"></span></a>
             </td>
             <!-- Modal Edit Data -->
             <div class="modal fade" id="upData" aria-hidden="true">
@@ -94,12 +99,6 @@
                     </div>
                 </div>
             </div>
-            <td>
-                <!-- Button Delete -->
-                <a href="delete/delete.php?dtdns=<?= $dns["id"]?>" class="btn btn-danger"
-                    onclick="return confirm('Anda Yakin Ingin Menghapus Data Ini?');"><span
-                        class="mdi mdi-delete"></span></a>
-            </td>
 
         </tr>
         <?php $i++?>
