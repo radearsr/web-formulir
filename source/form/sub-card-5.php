@@ -47,8 +47,7 @@
     </div>
 
     <div class="mt-5 d-grid gap-3 col-md-5 mx-auto">
-        <button class="p-2 rounded-3 btn btn-success print-now" type="submit"><span
-                class="mdi mdi-cloud-print-outline"></span>
-            Print Now</button>
+        <button class="p-2 rounded-3 btn btn-success print-now" type="submit"><span class="mdi mdi-content-save"></span>
+            Simpan Data</button>
     </div>
 </div>

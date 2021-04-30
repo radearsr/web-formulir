@@ -28,7 +28,7 @@
                     </div>
                     <!-- Akhir Card Header -->
 
-                    <form action="source/print-pdf/print_from_form.php" method="post">
+                    <form action="source/print-pdf/page_redirect.php" method="post">
                         <!-- Data Form -->
                         <?php
                                 include "source/form/sub-card-1.php";
