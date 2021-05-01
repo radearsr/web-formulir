@@ -2,8 +2,13 @@
  
  include "../functions.php";
 
+?>
+<?php 
+ include "library_pdf/vendor/autoload.php";
+ $mpdf = new \Mpdf\Mpdf();
  $id = $_GET["dtid"];
 
+//  Dapatkan Data Dari database
  $rows = fetch_data('', "SELECT center_table.main_id, DATE_FORMAT(center_table.tanggal, '%d-%m-%Y') AS 'tanggal', data_pemohon.*, data_penanggung.*,spek_server.*,data_ttd.* 
  FROM center_table 
  JOIN data_pemohon 
@@ -16,14 +21,7 @@
  ON center_table.id_ttd = data_ttd.id
  WHERE center_table.main_id = '$id'
  ");
-
-var_dump($rows);
-echo"<br>";
-?>
-<?php 
- include "library_pdf/vendor/autoload.php";
- $mpdf = new \Mpdf\Mpdf();
-
+ 
 foreach( $rows as $row ){
 
     // Jika id spek server 2 NULL maka tampilkan 2 lembar PDF

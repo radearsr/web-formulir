@@ -1,6 +1,27 @@
 <?php 
  include "../data-form.php";
+ include "../functions.php";
 
+ if( isset($_POST["child-merk"]) ){
+
+     // Insert Spek Server 2
+     $id_spek_2 = inSpekServer2( $merk2, $ram2, $hdd2, $psu2, $tipe2, $proc2, $core2, $os2, $sn2, $appServer2, $desServer2);
+
+     // Insert Spek Server
+     $id_spek = inSpekServer1( $merk, $ram, $hdd, $psu, $tipe, $proc, $core, $os, $sn, $appServer, $desServer, $id_spek_2);
+
+     // Insert All Data
+     $insert = insertData($opd, $bidang, $alamat, $FirstTelp, $FirstMail, $NmAdmin, $NipAdmin, $JbtAdmin, $MailAdmin, $TelpAdmin, $NmTeknis, $NipTeknis, $JbtTeknis, $MailTeknis, $TelpTeknis ,$nmTerang1, $nipTtd1, $nmTerang2, $nipTtd2);
+ }
+ elseif( !isset($_POST["child-merk"]) ){
+
+     // Insert Spek Server
+     $id_spek = inSpekServer1( $merk, $ram, $hdd, $psu, $tipe, $proc, $core, $os, $sn, $appServer, $desServer, NULL);
+ 
+     // Insert All Data
+     $insert = insertData($opd, $bidang, $alamat, $FirstTelp, $FirstMail, $NmAdmin, $NipAdmin, $JbtAdmin, $MailAdmin, $TelpAdmin, $NmTeknis, $NipTeknis, $JbtTeknis, $MailTeknis, $TelpTeknis ,$nmTerang1, $nipTtd1, $nmTerang2, $nipTtd2);
+
+ }   
 ?>
 
 <!DOCTYPE html>
@@ -11,6 +32,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/font/css/materialdesignicons.min.css">
     <title>Page Print</title>
 </head>
 
@@ -71,8 +93,20 @@
             <input name="child-os" type="hidden" value="<?= $os2?>" />
             <input name="child-sn" type="hidden" value="<?= $sn2?>" />
             <input name="child-app_server" type="hidden" value="<?= $appServer2?>" />
+            <input name="child-des_app" type="hidden" value="<?= $desServer2?>" />
             <?php endif;?>
-            <button type="submit" class="btn btn-primary btn-lg">Print Data</button>
+
+            <?php if( isset($_POST["opd-1"]) ) :?>
+            <button type="submit" class="btn btn-primary btn-lg"><span class="mdi mdi-printer"></span> Print
+                Data</button>
+            <a href="../../index.php" class="mt-2 btn btn-danger btn-lg"><span
+                    class="mdi mdi-keyboard-backspace"></span>Kembali Ke Halaman
+                Formulir</a>
+            <?php elseif( !isset($_POST["opd-1"]) ) :?>
+            <a href="../../index.php" class="btn btn-danger btn-lg"><span
+                    class="mdi mdi-keyboard-backspace"></span>Kembali Ke Halaman
+                Formulir</a>
+            <?php endif;?>
         </form>
     </div>
 

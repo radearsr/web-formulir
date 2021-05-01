@@ -50,7 +50,7 @@
 
 
         <!-- Contents Table -->
-        <?php  $i = 1;?>
+        <?php $dinas = fetch_data('', "SELECT * FROM daftar_dinas");  $i = 1;?>
         <?php foreach( $dinas as $dns ) : ?>
         <tr>
             <!-- Tabel No -->

@@ -16,8 +16,6 @@ JOIN data_ttd
 ON center_table.id_ttd = data_ttd.id"
 );
 
-$dinas = fetch_data('', "SELECT * FROM daftar_dinas");
-
 ?>
 
 
