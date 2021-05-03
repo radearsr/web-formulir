@@ -2,7 +2,7 @@
 <div class="card-body fourth-form" id="form-data1">
     <h5 class="text-center">DATA SERVER 1</h5>
     <br>
-    <label for="form2" class="col-md-9 col-form-label fw-lighter">*Hidupkan Tombol <span class="fw-bold">Data Server
+    <label for="form2" class="col-md-9 col-form-label fw-bold">*Hidupkan Tombol <span class="fst-italic">Data Server
             2</span> Jika Ingin Memasukkan 2 Data
         Server</label>
     <br>
